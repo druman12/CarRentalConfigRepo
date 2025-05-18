@@ -1,7 +1,4 @@
 spring:
-  application:
-    name: default-service-name
-
   datasource:
     url: jdbc:postgresql://yamanote.proxy.rlwy.net:48248/railway
     username: postgres
