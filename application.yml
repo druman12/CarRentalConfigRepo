@@ -1,0 +1,40 @@
+spring:
+  application:
+    name: default-service-name
+
+  datasource:
+    url: jdbc:postgresql://yamanote.proxy.rlwy.net:48248/railway
+    username: postgres
+    password: EbWmhfvRojvWIULVkTcKTvvcseZxYecN
+    driver-class-name: org.postgresql.Driver
+
+  jpa:
+    database-platform: org.hibernate.dialect.PostgreSQLDialect
+    hibernate:
+      ddl-auto: update
+    show-sql: true
+
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:8761/eureka/
+    registerWithEureka: true
+    fetchRegistry: true
+  instance:
+    leaseRenewalIntervalInSeconds: 10
+    leaseExpirationDurationInSeconds: 30
+    preferIpAddress: true
+    metadataMap:
+      instanceId: ${spring.application.name}:${spring.application.instance_id:${random.value}}
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: health,info,metrics,prometheus
+
+logging:
+  level:
+    com.netflix.discovery: WARN
+    org.springframework.cloud.netflix.eureka: WARN
+    org.springframework.web: INFO
