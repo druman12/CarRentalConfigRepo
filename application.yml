@@ -15,6 +15,9 @@ management:
   endpoint:
     health:
       show-details: always
+  tracing:
+    sampling:
+      probability: 1.0
 
 resilience4j:
   circuitbreaker:
@@ -51,7 +54,11 @@ spring:
     hibernate:
       ddl-auto: update
     show-sql: true
-
+    
+  zipkin:
+    base-url: http://localhost:9411
+    enabled: true
+    
 eureka:
   client:
     serviceUrl:
@@ -72,16 +79,7 @@ logging:
     org.springframework.web: INFO
     
 spring:
-  zipkin:
-    base-url: http://localhost:9411
-    enabled: true
+  
 
-management:
-  tracing:
-    sampling:
-      probability: 1.0
-  endpoints:
-    web:
-      exposure:
-        include: "*"
+
 
