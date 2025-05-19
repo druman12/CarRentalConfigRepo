@@ -1,3 +1,31 @@
+feign:
+  client:
+    config:
+      default:
+        connectTimeout: 5000
+        readTimeout: 5000
+  hystrix:
+    enabled: false  # Disable Hystrix if using Resilience4j
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: *
+  endpoint:
+    health:
+      show-details: always
+
+resilience4j:
+  circuitbreaker:
+    instances:
+      carService:
+        register-health-indicator: true
+        slidingWindowSize: 5
+        minimumNumberOfCalls: 5
+        failureRateThreshold: 50
+        waitDurationInOpenState: 10s
+
 spring:
   datasource:
     url: jdbc:postgresql://yamanote.proxy.rlwy.net:48248/railway
@@ -22,13 +50,7 @@ eureka:
     leaseExpirationDurationInSeconds: 30
     preferIpAddress: true
     metadataMap:
-      instanceId: ${spring.application.name}:${spring.application.instance_id:${random.value}}
-
-management:
-  endpoints:
-    web:
-      exposure:
-        include: health,info,metrics,prometheus
+      instanceId: "${spring.application.name}:${spring.application.instance_id:${random.value}}"
 
 logging:
   level:
