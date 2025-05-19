@@ -19,7 +19,7 @@ management:
 resilience4j:
   circuitbreaker:
     instances:
-      carService:
+      service:
         register-health-indicator: true
         slidingWindowSize: 5
         minimumNumberOfCalls: 5
