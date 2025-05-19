@@ -79,6 +79,9 @@ logging:
     com.netflix.discovery: WARN
     org.springframework.cloud.netflix.eureka: WARN
     org.springframework.web: INFO
+  pattern:
+    level: "%5p [${spring.application.name},%X{traceId:-},%X{spanId:-}]"
+
 
   
 
