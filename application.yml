@@ -19,7 +19,16 @@ management:
 resilience4j:
   circuitbreaker:
     instances:
-      service:
+      carServiceCB:
+        register-health-indicator: true
+        slidingWindowSize: 5
+        minimumNumberOfCalls: 5
+        failureRateThreshold: 50
+        waitDurationInOpenState: 10s
+resilience4j:
+  circuitbreaker:
+    instances:
+      rentalCompanyServiceCB:
         register-health-indicator: true
         slidingWindowSize: 5
         minimumNumberOfCalls: 5
