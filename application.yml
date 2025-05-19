@@ -70,3 +70,18 @@ logging:
     com.netflix.discovery: WARN
     org.springframework.cloud.netflix.eureka: WARN
     org.springframework.web: INFO
+    
+spring:
+  zipkin:
+    base-url: http://localhost:9411
+    enabled: true
+
+management:
+  tracing:
+    sampling:
+      probability: 1.0
+  endpoints:
+    web:
+      exposure:
+        include: "*"
+
