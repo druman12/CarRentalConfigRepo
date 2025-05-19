@@ -77,8 +77,7 @@ logging:
     com.netflix.discovery: WARN
     org.springframework.cloud.netflix.eureka: WARN
     org.springframework.web: INFO
-    
-spring:
+
   
 
 
