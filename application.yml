@@ -4,8 +4,6 @@ feign:
       default:
         connectTimeout: 5000
         readTimeout: 5000
-  hystrix:
-    enabled: false  # Disable Hystrix if using Resilience4j
 
 management:
   endpoints:
@@ -41,7 +39,6 @@ resilience4j:
         failureRateThreshold: 50
         waitDurationInOpenState: 10s
 
-
 spring:
   datasource:
     url: jdbc:postgresql://yamanote.proxy.rlwy.net:48248/railway
@@ -54,24 +51,24 @@ spring:
     hibernate:
       ddl-auto: update
     show-sql: true
-    
+
   zipkin:
     base-url: http://localhost:9411
     enabled: true
     service:
       name: ${spring.application.name}
-    
+
 eureka:
   client:
-    serviceUrl:
+    service-url:
       defaultZone: http://localhost:8761/eureka/
-    registerWithEureka: true
-    fetchRegistry: true
+    register-with-eureka: true
+    fetch-registry: true
   instance:
-    leaseRenewalIntervalInSeconds: 10
-    leaseExpirationDurationInSeconds: 30
-    preferIpAddress: true
-    metadataMap:
+    lease-renewal-interval-in-seconds: 10
+    lease-expiration-duration-in-seconds: 30
+    prefer-ip-address: true
+    metadata-map:
       instanceId: "${spring.application.name}:${spring.application.instance_id:${random.value}}"
 
 logging:
@@ -81,9 +78,3 @@ logging:
     org.springframework.web: INFO
   pattern:
     level: "%5p [${spring.application.name},%X{traceId:-},%X{spanId:-}]"
-
-
-  
-
-
-
