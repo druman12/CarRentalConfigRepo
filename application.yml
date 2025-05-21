@@ -43,7 +43,7 @@ spring:
   datasource:
     url: jdbc:postgresql://localhost:1245/newdata
     username: postgres
-    password: '#Vasu2005'
+    password: 1225
     driver-class-name: org.postgresql.Driver
 
 
