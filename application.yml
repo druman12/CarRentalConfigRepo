@@ -41,10 +41,11 @@ resilience4j:
 
 spring:
   datasource:
-    url: jdbc:postgresql://localhost:1245/CarRentalSystem
+    url: jdbc:postgresql://localhost:1245/newdata
     username: postgres
-    password: 1225
+    password: "#Vasu2005"
     driver-class-name: org.postgresql.Driver
+
 
 
   jpa:
