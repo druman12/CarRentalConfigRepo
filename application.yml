@@ -55,9 +55,9 @@ resilience4j:
 
 spring:
   datasource:
-    url: jdbc:postgresql://tramway.proxy.rlwy.net:51108/railway
+    url: jdbc:postgresql://metro.proxy.rlwy.net:31622/railway
     username: postgres
-    password: caIOUFPxifPAkOfNqOUoQCakIuvQQEzB
+    password: ksvkFGlcjnmldNPqowIONFbCCcDvhATJ
     driver-class-name: org.postgresql.Driver
 
 
