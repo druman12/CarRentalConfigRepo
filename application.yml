@@ -87,12 +87,17 @@ eureka:
       defaultZone: http://localhost:8761/eureka/
     register-with-eureka: true
     fetch-registry: true
+    healthcheck:
+      enabled: true
+    registry-fetch-interval-seconds: 10         # frequency to fetch registry
+    eureka-service-url-poll-interval-seconds: 60 # polling interval for Eureka
+
   instance:
-    lease-renewal-interval-in-seconds: 10
-    lease-expiration-duration-in-seconds: 30
+    lease-renewal-interval-in-seconds: 10        # how often this instance renews its lease
+    lease-expiration-duration-in-seconds: 30     # how long Eureka waits before evicting this instance
     prefer-ip-address: true
-    metadata-map:
-      instanceId: "${spring.application.name}:${spring.application.instance_id:${random.value}}"
+    instance-id: ${spring.application.name}:${spring.application.instance_id:${random.value}}  # unique ID
+
 
 logging:
   level:
