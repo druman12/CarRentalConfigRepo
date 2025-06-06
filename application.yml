@@ -56,7 +56,7 @@ resilience4j:
 spring:
   datasource:
     url: jdbc:postgresql://metro.proxy.rlwy.net:31622/railway
-    username: car_rental_1zfk_user
+    username: postgres
     password: ksvkFGlcjnmldNPqowIONFbCCcDvhATJ
     driver-class-name: org.postgresql.Driver
   hikari:
