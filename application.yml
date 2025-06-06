@@ -55,7 +55,7 @@ resilience4j:
 
 spring:
   datasource:
-    url: jdbc:postgresql://car_rental_1zfk_user:L82zaSCCdWJFdYK7BEH4z5VNdrUMGO2I@dpg-d11au16mcj7s73a1q1kg-a.oregon-postgres.render.com/car_rental_1zfk
+    url: jdbc:postgresql://dpg-d11au16mcj7s73a1q1kg-a:5432/car_rental_1zfk
     username: car_rental_1zfk_user
     password: L82zaSCCdWJFdYK7BEH4z5VNdrUMGO2I
     driver-class-name: org.postgresql.Driver
