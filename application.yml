@@ -60,19 +60,20 @@ spring:
     password: rUZnlzJwcbBzSfhnCYLFhRNnWCwsFXkN
     driver-class-name: org.postgresql.Driver
   hikari:
-    maximum-pool-size: 10
-    minimum-idle: 5
-    idle-timeout: 30000
-    max-lifetime: 1800000
-    connection-timeout: 30000
+      maximum-pool-size: 10
+      minimum-idle: 5
+      idle-timeout: 30000         # 30 seconds
+      max-lifetime: 1800000       # 30 minutes
+      connection-timeout: 30000   # 30 seconds
+
+
+
 
   jpa:
     database-platform: org.hibernate.dialect.PostgreSQLDialect
-    show-sql: true
     hibernate:
       ddl-auto: update
-      jdbc:
-        time_zone: Asia/Kolkata  # ✅ Correct timezone
+    show-sql: true
 
 
 
