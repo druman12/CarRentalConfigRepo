@@ -57,7 +57,7 @@ spring:
   datasource:
     url: jdbc:postgresql://turntable.proxy.rlwy.net:21366/railway?currentSchema=public
     username: postgres
-    password: rUZnlzJwcbBzSfhnCYLFhRNnWCwsFXkN
+    password: EIlADIqqLodNvhpXqToFQmfhPwGZjPAD
     driver-class-name: org.postgresql.Driver
   hikari:
     maximum-pool-size: 10
