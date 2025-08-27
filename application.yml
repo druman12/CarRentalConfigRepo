@@ -55,9 +55,9 @@ resilience4j:
 
 spring:
   datasource:
-    url: jdbc:postgresql://host:port/dbname?currentSchema=public&serverTimezone=Asia/Kolkata
+    url: jdbc:postgresql://turntable.proxy.rlwy.net:21366/railway?currentSchema=public
     username: postgres
-    password: EIlADIqqLodNvhpXqToFQmfhPwGZjPAD
+    password: rUZnlzJwcbBzSfhnCYLFhRNnWCwsFXkN
     driver-class-name: org.postgresql.Driver
   hikari:
     maximum-pool-size: 10
@@ -70,6 +70,8 @@ spring:
     database-platform: org.hibernate.dialect.PostgreSQLDialect
     hibernate:
       ddl-auto: update
+      jdbc:
+        time_zone: Asia/Kolkata   # use correct timezone
     show-sql: true
 
 
