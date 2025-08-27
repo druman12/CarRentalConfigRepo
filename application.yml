@@ -55,9 +55,9 @@ resilience4j:
 
 spring:
   datasource:
-    url: jdbc:postgresql://interchange.proxy.rlwy.net:45121/railway
+    url: jdbc:postgresql://turntable.proxy.rlwy.net:21366/railway
     username: postgres
-    password: rUZnlzJwcbBzSfhnCYLFhRNnWCwsFXkN
+    password: EIlADIqqLodNvhpXqToFQmfhPwGZjPAD
     driver-class-name: org.postgresql.Driver
   hikari:
     maximum-pool-size: 10
